@@ -1,0 +1,42 @@
+.header {
+  height: 28rem;
+  background-image: url("../../images/foodbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.crimson{
+    color: crimson;
+}
+
+.paragraph {
+  font-size: 1rem;
+}
+
+.hero-message {
+  margin-top: 1rem;
+  max-width: 361px;
+}
+
+@media (min-width: 40rem) {
+  .hero-message {
+    margin-top: 2rem;
+    max-width: 384px;
+  }
+}
