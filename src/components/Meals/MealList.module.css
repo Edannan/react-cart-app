@@ -1,0 +1,13 @@
+.meallist {
+  padding: 0 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0px;
+}
+
+@media (min-width: 40rem) {
+  .meallist {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
