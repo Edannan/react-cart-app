@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.price{
+    color: crimson;
+}
+
 .description{
   text-align: left;
 }

@@ -9,7 +9,7 @@ const MealItem = ({id, price, title, description, image}) => {
       <div className={classes['card-body']}>
         <div className={classes.title}>
           <h4>{title}</h4>
-          <h4>${price.toFixed(2)}</h4>
+          <h4 className={classes.price}>${price.toFixed(2)}</h4>
         </div>
         <p className={classes.description}>{description}</p>
         <MealItemForm id={id} />

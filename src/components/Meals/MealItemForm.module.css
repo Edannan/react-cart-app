@@ -1,0 +1,36 @@
+.mealitemform {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartbuttons {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid crimson;
+  border-radius: 0.625rem;
+  padding: 0.125rem;
+}
+
+.cartbuttons button {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border-radius: 0.325rem;
+}
+
+.add {
+  cursor: pointer;
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.313rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.add:hover {
+  background-color: rgb(163, 16, 46);
+}
