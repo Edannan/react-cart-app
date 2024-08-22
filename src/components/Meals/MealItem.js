@@ -1,12 +1,18 @@
 import React from "react";
 import classes from './MealItem.module.css'
+import MealItemForm from "./MealItemForm";
 
 const MealItem = ({id, price, title, description, image}) => {
   return (
     <div className={classes.card}>
       <img src={image} className={classes['card-img']} alt="" />
       <div className={classes['card-body']}>
-        {description}
+        <div className={classes.title}>
+          <h4>{title}</h4>
+          <h4>${price.toFixed(2)}</h4>
+        </div>
+        <p className={classes.description}>{description}</p>
+        <MealItemForm id={id} />
       </div>
     </div>
   );

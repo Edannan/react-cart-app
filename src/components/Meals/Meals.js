@@ -6,8 +6,8 @@ const Meals = () => {
   return (
     <main className={classes.main}>
       <div className={classes.headings}>
-        <h4>Our Menu</h4>
-        <h3>Discover our Menu</h3>
+        <h3>Our Menu</h3>
+        <h1>Discover our Menu</h1>
         <MealList />
       </div>
     </main>
