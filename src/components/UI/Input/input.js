@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import classes from './Input.module.css'
 
-const input = forwardRef((props, ref) => {
+const Input = forwardRef((props, ref) => {
   return (
     <div className={classes.input}>
         <input ref={ref} {...props.input} />     
@@ -9,4 +9,4 @@ const input = forwardRef((props, ref) => {
   )
 })
 
-export default input
+export default Input

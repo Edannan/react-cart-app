@@ -9,22 +9,24 @@ const MealItemForm = ({ id }) => {
     const amount = inputref.current.value;
     const newamount = parseInt(amount) + 1;
     inputref.current.value = newamount;
-  }
+  };
 
   const decreaseAmt = () => {
     const amount = inputref.current.value;
 
-    if(parseInt(amount) === 1){
+    if (parseInt(amount) === 1) {
       return;
     }
     const newamount = parseInt(amount) - 1;
     inputref.current.value = newamount;
-  }
+  };
 
   return (
     <form className={classes.mealitemform}>
       <div className={classes.cartbuttons}>
-        <button type="button" onClick={increaseAmt}>+</button>
+        <button type="button" onClick={decreaseAmt}>
+          -
+        </button>
         <Input
           ref={inputref}
           input={{
@@ -36,9 +38,13 @@ const MealItemForm = ({ id }) => {
             defaultValue: "1",
           }}
         />
-        <button type="button" onClick={decreaseAmt}>-</button>
+        <button type="button" onClick={increaseAmt}>
+          +
+        </button>
       </div>
-      <button className={classes.add}>Add to cart</button>
+      <button type="button" className={classes.add}>
+        Add to cart
+      </button>
     </form>
   );
 };

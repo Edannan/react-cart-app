@@ -20,6 +20,10 @@
   border-radius: 0.325rem;
 }
 
+.cartbuttons button:hover{
+    color: crimson;
+}
+
 .add {
   cursor: pointer;
   background-color: crimson;

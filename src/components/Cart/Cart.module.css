@@ -1,0 +1,8 @@
+.cartContentContainer{
+    overflow-x: auto;
+}
+
+.heading{
+    text-align: center;
+    color: crimson;
+}
