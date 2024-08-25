@@ -3,8 +3,14 @@ import Input from "../UI/Input/input";
 import classes from "./MealItemForm.module.css";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
+import { toast } from "react-toastify";
 
 const MealItemForm = ({ id, price, title, image }) => {
+  const notify = () =>
+    toast.success("Added to cart!", {
+      position: "top-left"
+    });
+
   const dispatch = useDispatch();
   const inputref = useRef(null);
 
@@ -34,6 +40,7 @@ const MealItemForm = ({ id, price, title, image }) => {
         price: price,
       })
     );
+    notify();
     inputref.current.value = 1;
   };
 
