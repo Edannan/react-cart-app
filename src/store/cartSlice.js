@@ -80,6 +80,11 @@ const cartSlice = createSlice({
         })
       );
     },
+    replaceCart(state, action) {
+        const localStorageCart = action.payload;
+        state.items = localStorageCart.items;
+        state.totalQuantity =localStorageCart.totalQuantity;
+    }
   },
 });
 
