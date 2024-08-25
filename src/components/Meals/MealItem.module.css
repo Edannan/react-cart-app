@@ -2,7 +2,6 @@
   border: 1px solid rgb(22, 22, 22);
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  /* min-height: 34.375rem; */
   overflow: hidden;
   background-color: rgb(22, 22, 22);
 }
@@ -16,12 +15,20 @@
 .card-body {
   padding: 1rem;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.name{
+  max-width: 65%;
 }
 
 .price{
@@ -37,3 +44,12 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
+@media(min-width: 36rem ){
+
+  .card-body {
+    height: 26rem;
+  }
+}
+

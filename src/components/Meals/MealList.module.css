@@ -11,13 +11,13 @@
   }
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 64.313rem) {
   .meallist {
     grid-template-columns: repeat(3, minmax(0, auto));
   }
 }
 
-@media (min-width: 75rem) {
+@media (min-width: 85.375rem) {
   .meallist {
     grid-template-columns: repeat(4, minmax(0, auto));
   }

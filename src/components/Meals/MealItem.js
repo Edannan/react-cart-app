@@ -8,8 +8,8 @@ const MealItem = ({id, price, title, description, image}) => {
       <img src={image} className={classes['card-img']} alt="" />
       <div className={classes['card-body']}>
         <div className={classes.title}>
-          <h4>{title}</h4>
-          <h4 className={classes.price}>${price.toFixed(2)}</h4>
+          <div className={classes.name}><h4>{title}</h4></div>
+          <div><h4 className={classes.price}>${price.toFixed(2)}</h4></div>
         </div>
         <p className={classes.description}>{description}</p>
         <MealItemForm id={id} price={price} title={title} image={image} />
