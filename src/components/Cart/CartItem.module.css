@@ -24,8 +24,8 @@ tr {
 }
 
 .image {
-  min-width: 4rem;
-  max-width: 4rem;
+  min-width: 3rem;
+  max-width: 3rem;
   height: auto;
   margin-right: 0.5rem;
   border-radius: 0.5rem; /* Add border-radius to the div */
