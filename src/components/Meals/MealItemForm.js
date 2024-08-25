@@ -1,8 +1,11 @@
 import React, { useRef } from "react";
 import Input from "../UI/Input/input";
 import classes from "./MealItemForm.module.css";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cartSlice";
 
-const MealItemForm = ({ id }) => {
+const MealItemForm = ({ id, price, title, image }) => {
+  const dispatch = useDispatch();
   const inputref = useRef(null);
 
   const increaseAmt = () => {
@@ -19,6 +22,19 @@ const MealItemForm = ({ id }) => {
     }
     const newamount = parseInt(amount) - 1;
     inputref.current.value = newamount;
+  };
+
+  const addToCart = () => {
+    dispatch(
+      cartActions.addtoCart({
+        id: id,
+        title: title,
+        quantity: inputref.current.value,
+        image: image,
+        price: price,
+      })
+    );
+    inputref.current.value = 1;
   };
 
   return (
@@ -42,7 +58,7 @@ const MealItemForm = ({ id }) => {
           +
         </button>
       </div>
-      <button type="button" className={classes.add}>
+      <button type="button" onClick={addToCart} className={classes.add}>
         Add to cart
       </button>
     </form>

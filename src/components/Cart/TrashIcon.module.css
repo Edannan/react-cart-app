@@ -1,0 +1,5 @@
+.icon {
+  cursor: pointer;
+  stroke: #ffffff;
+  transition: stroke 0.3s ease;
+}

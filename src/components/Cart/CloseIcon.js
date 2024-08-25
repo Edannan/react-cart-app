@@ -1,4 +1,4 @@
-import classes from './CloseIcon.module.css'
+import classes from "./CloseIcon.module.css";
 
 const CloseIcon = (props) => {
   return (
@@ -9,19 +9,20 @@ const CloseIcon = (props) => {
       width="30"
       height="30"
       className={props.className}
+      onClick={props.onClose}
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         <path
-        className={classes.path}
+          className={classes.path}
           fill="none"
           stroke="#fff"
-          stroke-width="2"
+          strokeWidth="2"
           d="M7,7 L17,17 M7,17 L17,7"
         ></path>
       </g>

@@ -2,6 +2,7 @@
   border: 1px solid rgb(22, 22, 22);
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  /* min-height: 34.375rem; */
   overflow: hidden;
   background-color: rgb(22, 22, 22);
 }

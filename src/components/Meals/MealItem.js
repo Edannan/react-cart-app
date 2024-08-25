@@ -12,7 +12,7 @@ const MealItem = ({id, price, title, description, image}) => {
           <h4 className={classes.price}>${price.toFixed(2)}</h4>
         </div>
         <p className={classes.description}>{description}</p>
-        <MealItemForm id={id} />
+        <MealItemForm id={id} price={price} title={title} image={image} />
       </div>
     </div>
   );
