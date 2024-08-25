@@ -14,9 +14,16 @@ function App() {
   const dispatch = useDispatch();
   const showModal = useSelector((state) => state.ui.showModal);
 
-
   //synchronizes the redux state with the localstorage data when the component is mounted.
   useEffect(() => {
+    localStorage.setItem(
+      "cart",
+      JSON.stringify({
+        items: [],
+        totalQuantity: 0,
+      })
+    );
+
     const localStorageData = JSON.parse(localStorage.getItem("cart"));
     dispatch(cartActions.replaceCart(localStorageData));
   }, [dispatch]);
