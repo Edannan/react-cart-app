@@ -16,16 +16,30 @@ function App() {
 
   //synchronizes the redux state with the localstorage data when the component is mounted.
   useEffect(() => {
-    localStorage.setItem(
-      "cart",
-      JSON.stringify({
-        items: [],
-        totalQuantity: 0,
-      })
-    );
+    try {
+      const localStorageData = JSON.parse(localStorage.getItem("cart"));
 
-    const localStorageData = JSON.parse(localStorage.getItem("cart"));
-    dispatch(cartActions.replaceCart(localStorageData));
+      if (localStorageData) {
+        dispatch(cartActions.replaceCart(localStorageData));
+      } else {
+        localStorage.setItem(
+          "cart",
+          JSON.stringify({
+            items: [],
+            totalQuantity: 0,
+          })
+        );
+      }
+    } catch (error) {
+      console.error("Error parsing cart data from localStorage:", error);
+      localStorage.setItem(
+        "cart",
+        JSON.stringify({
+          items: [],
+          totalQuantity: 0,
+        })
+      );
+    }
   }, [dispatch]);
 
   return (
