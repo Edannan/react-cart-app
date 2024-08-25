@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { uiActions } from "../../store/uiSlice";
 import { cartActions } from "../../store/cartSlice";
 
-const Cart = (props) => {
+const Cart = () => {
   const cartStateItems = useSelector((state) => state.cart.items);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
@@ -34,7 +34,7 @@ const Cart = (props) => {
   const totalQ = cartStore?.totalQuantity || totalQuantity;
 
   return (
-    <Modal onClose={props.closeCart}>
+    <Modal onClose={handleClose}>
       <CloseIcon className={classes.close} onClose={handleClose} />
       <h2 className={classes.heading}>Your Cart</h2>
       {totalQ === 0 && <div className={classes.empty}>Your cart is empty.</div>}

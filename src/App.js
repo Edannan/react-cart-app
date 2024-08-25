@@ -6,7 +6,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Fragment, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { uiActions } from "./store/uiSlice";
 import { cartActions } from "./store/cartSlice";
 import { useSelector } from "react-redux";
 import Footer from "./components/Footer/Footer";
@@ -20,14 +19,10 @@ function App() {
     dispatch(cartActions.replaceCart(localStorageData));
   }, [dispatch]);
 
-  const closehandleCart = () => {
-    dispatch(uiActions.toggleModal());
-  };
-
   return (
     <Fragment>
       <ToastContainer />
-      {showModal && <Cart closeCart={closehandleCart} />}
+      {showModal && <Cart />}
       <Header />
       <Meals />
       <Footer />
