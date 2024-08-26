@@ -9,8 +9,8 @@ const TrashIcon = ({ removeItem }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       stroke="#ffffff"
-      width="21"
-      height="21"
+      width="17"
+      height="17"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
