@@ -8,7 +8,10 @@ import { toast } from "react-toastify";
 const MealItemForm = ({ id, price, title, image }) => {
   const notify = () =>
     toast.success("Added to cart!", {
-      position: "top-left"
+      position: "top-left",
+      autoClose: 500,
+      hideProgressBar: true,
+      className: classes.mobilescreen
     });
 
   const dispatch = useDispatch();

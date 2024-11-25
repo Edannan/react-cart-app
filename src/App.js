@@ -44,7 +44,7 @@ function App() {
 
   return (
     <Fragment>
-      <ToastContainer />
+      <ToastContainer stacked />
       {showModal && <Cart />}
       <Header />
       <Meals />

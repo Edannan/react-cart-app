@@ -39,3 +39,9 @@
 .add:hover {
   background-color: rgb(163, 16, 46);
 }
+
+@media(max-width: 480px){
+  .mobilescreen{
+    width: 50%;
+  }
+}
